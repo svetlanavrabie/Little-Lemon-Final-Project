@@ -1,10 +1,11 @@
 import "./App.css";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <div>
-      <h1>This is empty Little-Lemon react project</h1>
-    </div>
+    <>
+      <Nav />
+    </>
   );
 }
 
