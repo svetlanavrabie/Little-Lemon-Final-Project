@@ -1,7 +1,7 @@
 /* eslint-disable no-unreachable */
 import React, { useState } from "react";
-import "../styles/Nav.css";
 import logo from "../assets/logos/Logo .svg";
+import "../styles/Nav.css";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);

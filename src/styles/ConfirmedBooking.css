@@ -1,0 +1,13 @@
+.comfirm {
+  padding: 10px 13%;
+}
+
+.comfirm span {
+  color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  .comfirm {
+    padding: 10px 8%;
+  }
+}
