@@ -27,8 +27,9 @@
 .menu-items {
   /* height: 400px; */
   width: 350px;
-  background: #a9c8be;
+  background: #000;
   border-radius: 8px;
+  color: #e7e1e1;
 }
 
 .menu-container img {
