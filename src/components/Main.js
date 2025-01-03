@@ -3,6 +3,8 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Booking from "./Booking";
 import ConfirmedBooking from "./ConfirmedBooking";
 import Header from "./Header";
+import Login from "./Login";
+import SuccesfullyLogged from "./SuccesfullyLogged";
 
 const Main = () => {
   const seededRandom = function (seed) {
@@ -62,6 +64,9 @@ const Main = () => {
           }
         />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/header" element={<Header />} />
+        <Route path="/succesfullylogged" element={<SuccesfullyLogged />} />
       </Routes>
     </main>
   );
