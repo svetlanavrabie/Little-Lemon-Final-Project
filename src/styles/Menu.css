@@ -48,10 +48,17 @@
 }
 
 .orderbtn {
+  display: flex;
+  align-items: center;
   padding: 5px 12px;
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 600;
+}
+
+.specialsdelivery {
+  font-size: 20px;
+  margin-left: 5px;
 }
 
 @media screen and (max-width: 768px) {

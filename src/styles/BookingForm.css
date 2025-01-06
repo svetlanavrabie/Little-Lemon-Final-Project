@@ -7,40 +7,185 @@ form {
   background-color: #f4ce14;
 }
 
-input,
-label {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
+.btnReceive {
+  margin-top: 20px;
 }
 
-label {
+.reserve__buttons .btn-reserve:hover {
+  background-color: #f4ce14;
+  cursor: pointer;
+}
+
+.date-time {
+  /* border: 1px solid red; */
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
   font-weight: bold;
+  font-size: 28px;
+  width: 50%;
 }
 
-#book-date,
-#book-time,
-#book-guests,
-#book-occasion {
-  background: #fff;
-  padding: 8px 24px;
+.date,
+.time {
+  background-color: black;
+  color: #edefee;
+  border: 1px solid #edefee;
+  border-radius: 7px;
+  padding: 7px;
+}
+
+.choose-date {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+}
+
+.guest-title {
+  color: #fff;
+}
+
+input[type="date"] {
+  background-color: #fff;
+  color: black;
+  font-size: 24px;
+  padding: 10px;
   border: none;
   outline: none;
-  border-radius: 2px;
+  border-radius: 5px;
+
+  width: 250px;
+  height: 60px;
 }
 
-.btnReceive input {
-  padding: 12px 16px;
-  margin-top: 20px;
+input[type="number"] {
+  background-color: #fff;
+  color: black;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+  width: 50px;
+  height: 60px;
+}
+
+.ocassion-selector {
+  background-color: #fff;
+  color: black;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 250px;
+  height: 80px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='30' viewBox='0 0 24 24' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 50%;
+}
+
+.btn-reserve {
+  width: 160px;
+  height: 60px;
+
+  font-family: "Markazi Text", serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 650;
+
+  border-radius: 10px;
+
   background: black;
   color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
 }
+
+/*****   ------***/
+#book-time {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 10px; /* Space between buttons */
+  justify-content: center; /* Center content horizontally */
+  max-width: 600px; /* Optional: Limit width for centering */
+  margin: 0 auto; /* Center grid container */
+}
+
+.radio-button {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.radio-button input {
+  position: absolute;
+  opacity: 0; /* Hide the radio input */
+  pointer-events: none;
+}
+
+.radio-button span {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff; /* Default white color */
+  color: #000; /* Default text color */
+  border: 2px solid #ccc; /* Border for unselected state */
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  text-align: center;
+}
+
+.radio-button:hover span {
+  border-color: #aaa; /* Slightly darker border on hover */
+}
+
+.radio-button input:checked + span {
+  background-color: #f4ce14; /* Yellow when selected */
+  color: #000; /* Text remains black */
+  border-color: #f4ce14; /* Border matches the background */
+}
+
+@media (max-width: 768px) {
+  #book-time {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #book-time {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}
+/**** ----***/
 
 @media screen and (max-width: 768px) {
   form {
     padding: 10px 8%;
+  }
+
+  .choose-date {
+    flex-direction: column;
+  }
+  .date-time {
+    width: auto;
   }
 }

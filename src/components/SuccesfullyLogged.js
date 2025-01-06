@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/SuccesfullyLogged.css";
+import confirmImg from "../assets/images/bookingConfirmed.png";
 
 const SuccesfullyLogged = () => {
   const username = localStorage.getItem("username").toUpperCase();
@@ -7,6 +8,7 @@ const SuccesfullyLogged = () => {
 
   return (
     <div className="home">
+      <img src={confirmImg} alt="" />
       <h2>Succesfully!</h2>
       {username && userlastname && (
         <p>

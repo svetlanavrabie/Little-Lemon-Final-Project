@@ -1,14 +1,26 @@
 import React from "react";
-import "../styles/ConfirmedBooking.css";
+import confirmImg from "../assets/images/bookingConfirmed.png";
 
+const style = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "1rem",
+  justifyContent: "center",
+  alignItems: "center",
+  height: "50vh",
+  width: "auto",
+  fontSize: "1rem",
+  fontWeight: "bold",
+  color: "green",
+  textAlign: "center",
+  textTransform: "uppercase",
+  padding: "1rem",
+};
 const ConfirmedBooking = () => {
   return (
-    <div className="comfirm">
-      <div>
-        <h1>
-          Booking has been <span>confirmed!</span>
-        </h1>
-      </div>
+    <div style={style}>
+      <img src={confirmImg} alt="" />
+      <h1> The booking was Confirmed!</h1>
     </div>
   );
 };

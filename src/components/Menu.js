@@ -3,6 +3,7 @@ import recipes from "../helpers/recipes";
 import Swal from "sweetalert2";
 import "../styles/Menu.css";
 import { useNavigate } from "react-router-dom";
+import { MdDeliveryDining } from "react-icons/md";
 
 const Menu = () => {
   //   console.log(recipes[0]);
@@ -93,6 +94,7 @@ const Menu = () => {
                 onClick={() => handleOrder(recipe.id)}
               >
                 Order Now
+                <MdDeliveryDining className="specialsdelivery" />
               </button>
             </div>
           </div>
